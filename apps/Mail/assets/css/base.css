@@ -1,0 +1,27 @@
+html {
+    /* font-family: Poppins-Regular, sans-serif; */
+    color: #626262;
+    line-height: 1.25;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    /* margin: 0 0 .833em; */
+    color: #4f4e4e;
+    font-weight: 900;
+    /* font-size: 28px; */
+    text-transform: uppercase;
+}
+
+button:hover {
+    cursor: pointer;
+}
