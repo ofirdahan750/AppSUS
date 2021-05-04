@@ -1,4 +1,4 @@
-import {App} from './AppSus.jsx'
+import {App} from './App.jsx'
 
 ReactDOM.render(
     <App/>,
