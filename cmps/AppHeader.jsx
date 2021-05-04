@@ -10,7 +10,7 @@ render() {
           <ul>
             <li><NavLink exact to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/about">Keep</NavLink></li>
+            <li><NavLink to="/keep">Keep</NavLink></li>
             <li><NavLink to="/about">Maill</NavLink></li>
           </ul>
         </nav>
