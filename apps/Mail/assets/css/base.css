@@ -1,6 +1,6 @@
 html {
     /* font-family: Poppins-Regular, sans-serif; */
-    color: #626262;
+    color: #5f5d5d;
     line-height: 1.25;
     scroll-behavior: smooth;
 }
@@ -15,10 +15,8 @@ a {
 }
 
 h2 {
-    /* margin: 0 0 .833em; */
     color: #4f4e4e;
     font-weight: 900;
-    /* font-size: 28px; */
     text-transform: uppercase;
 }
 
