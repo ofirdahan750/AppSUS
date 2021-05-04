@@ -30,8 +30,6 @@
     flex-direction: row-reverse;
 }
 
-
-
 /* list helpers */
 
 .clean-list {
@@ -42,5 +40,5 @@
 }
 
 .hide {
-display: none;
+    display: none;
 }
