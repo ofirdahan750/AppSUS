@@ -18,7 +18,7 @@ export class KeepApp extends React.Component {
     render() {
         return (
             <section>
-                <h1>hello</h1>
+                <h1 className="test">hello</h1>
             </section>
         )
     }
