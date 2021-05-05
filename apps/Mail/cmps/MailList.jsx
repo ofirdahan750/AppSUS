@@ -1,10 +1,9 @@
-export function MailList(props) {
-    function test() {
-        console.log(props)
-    }
+import {MailPerview} from './MailPreview.jsx'
+export function MailList({emails}) {
+    console.log({emails})
     return (
-        <div className="mail-list clean-list">
-        {test()}
-             </div>
+        <div  className="mail-list clean-list">
+            {emails.map(email=>< MailPerview email={email} key={email.id}/>)}
+        </div>
     )
 }

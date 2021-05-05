@@ -1,25 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
-    /* font-family: Poppins-Regular, sans-serif; */
-    color: #1f1f1f;
+    font-family: lato-regular, sans-serif;
+    color: #606060;
     line-height: 1.25;
-    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
     font-size: 1rem;
+    margin: 0;
 }
 
-a {
-    text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1rem;
 }
 
-h2 {
-    color: #4f4e4e;
-    font-weight: 900;
-    text-transform: uppercase;
+p {
+    margin: 0 0 1rem;
 }
 
-button:hover {
+button {
     cursor: pointer;
 }
