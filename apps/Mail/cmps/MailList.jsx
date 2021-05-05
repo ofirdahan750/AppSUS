@@ -4,7 +4,7 @@ export function MailList(props) {
     }
     return (
         <div className="mail-list clean-list">
-           <pre>{test()}  </pre> 
+        {test()}
              </div>
     )
 }

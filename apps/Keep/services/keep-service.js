@@ -3,19 +3,19 @@ import { utilService } from '../../../services/util-service.js'
 import { gNotes } from './note-data.js'
 
 export const keepService = {
-    notesQuery,
-};
-
-function notesQuery() {
-    let notes = storageService.query('notes')
-    if (!notes || !notes.length) {
-        notes = gNotes
-        utilService.saveToStorage('notes', gNotes)
-    }
-    console.log('notes', notes)
-    return Promise.resolve(notes)
+    query
 }
+const KEY_NOTE = 'notes'
 
-// function createNote(){
+_createNote()
 
-// }
+function _createNote() {
+    let notes = utilService.loadFromStorage(KEY_NOTE)
+    if (!notes || !notes.length) {
+         notes =gNotes
+        utilService.saveToStorage(KEY_NOTE, gNotes)
+    }
+}
+function query() {
+    return storageService.query(KEY_NOTE)
+}
