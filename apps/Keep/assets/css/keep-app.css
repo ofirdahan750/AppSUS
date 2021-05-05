@@ -1,3 +1,10 @@
 .test {
     color:red
 }
+
+.note-preview {
+    background-color: darkcyan;
+    padding: 5px;
+    width: 200px;
+    text-align: center;    
+}
