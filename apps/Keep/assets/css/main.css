@@ -1,13 +1,13 @@
+*{
+    box-sizing: border-box;
+}
 body {
     background-color: lightblue;
 }
 
-.user-preview {
+.note-preview {
     background-color: darkcyan;
     padding: 5px;
     width: 200px;
     text-align: center;    
-}
-.user-preview button {
-    margin: 5px;
 }
