@@ -4,16 +4,20 @@ const { NavLink, withRouter } = ReactRouterDOM
 export class _AppHeader extends React.Component {
 render() {
   return (
-    <header>
-    <h1>appsus logo</h1>
-    <nav>
-          <ul>
+    <header className="main-header">
+      <section className="header-warper flex">
+        <div className="logo">
+    <p>appsus logo</p>
+    </div>
+    <nav className="main-nav">
+          <ul className="clean-list flex space-between">
             <li><NavLink exact to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/about">Keep</NavLink></li>
-            <li><NavLink to="/about">Maill</NavLink></li>
+            <li><NavLink to="/about">Mail</NavLink></li>
           </ul>
         </nav>
+        </section>
   </header>
 
   )

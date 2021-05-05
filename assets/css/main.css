@@ -1,2 +1,3 @@
-@import './base.css';
-@import './helper.css';
+@import './basics/base.css';
+@import './basics/helper.css';
+@import './basics/header.css'

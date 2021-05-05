@@ -1,6 +1,6 @@
 html {
     /* font-family: Poppins-Regular, sans-serif; */
-    color: #5f5d5d;
+    color: #1f1f1f;
     line-height: 1.25;
     scroll-behavior: smooth;
 }
@@ -20,6 +20,6 @@ h2 {
     text-transform: uppercase;
 }
 
-/* button:hover {
+button:hover {
     cursor: pointer;
-} */
+}
