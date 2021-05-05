@@ -3,6 +3,7 @@ const { Route, Switch } = ReactRouterDOM
 
 import { AppHome } from '../pages/AppHome.jsx'
 import { KeepApp } from '../apps/Keep/KeepApp.jsx'
+import { MailApp } from '../apps/Mail/pages/MailApp.jsx'
 import { about } from '../pages/about.jsx'
 
 export class AppMain extends React.Component {
@@ -11,6 +12,7 @@ export class AppMain extends React.Component {
             <Router>
             <main className="main-app">
                 <Switch>
+                    <Route  component={MailApp} path="/mail" />
                     <Route component={KeepApp} path="/keep" />
                     <Route component={about} path="/about" />
                     <Route component={AppHome} path="/" />
