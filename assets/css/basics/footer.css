@@ -1,5 +1,9 @@
 footer {
-text-align: center;
-text-transform: uppercase;
-font-weight: 900;
+    position: relative;
+    bottom: 0;
+    border-top: 1px solid;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    width: 100%;
 }

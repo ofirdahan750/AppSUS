@@ -1,0 +1,21 @@
+.email-section {
+  margin: 0 auto;
+  max-width: 95%;
+  min-height: 80%;
+  margin: 10px 0;
+}
+.email-sidenav {
+    width: 30%;
+    margin-right: 5px;
+}
+.mail-list {
+    width: 70%;
+    overflow:auto;
+}
+.email-sidenav {
+    width: 30%;
+    margin-right: 5px;
+}
+.is-read {
+    font-weight: bolder;
+}

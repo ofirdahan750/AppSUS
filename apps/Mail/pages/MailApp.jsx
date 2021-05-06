@@ -2,6 +2,7 @@
 
 import { EmailService } from '../services/mail-service.js'
 import { MailList } from '../cmps/MailList.jsx'
+import {MailSideNav} from '../cmps/MailSideNav.jsx'
 export class MailApp extends React.Component {
     state = {
         emails: null
@@ -17,12 +18,11 @@ export class MailApp extends React.Component {
     render() {
         const { emails } = this.state
         return (
-            
-            <section>
-                <h1>Welcome to email</h1>
+            <main className="email-section flex">
+                <MailSideNav/>
                 {emails && <MailList emails={emails} />}
                 {!emails || (!emails.length) && <div>No email to show..</div>}
-            </section>
+            </main>
         )
     }
 
