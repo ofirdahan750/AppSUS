@@ -1,14 +1,15 @@
-// import { EmailService } from "../services/mail-service";
+import { EmailService } from '../../Mail/services/mail-service.js'
+import { eventBusService } from '../../../services/event-bus-service.js'
 
 
 export class MailPerview extends React.Component {
+    
     state = {
         setEmail: {
-            email: null,
             titleTrim: '',
             previewClass: '',
-            isRead: null
         }
+
     }
 
     componentDidMount() {
@@ -16,28 +17,25 @@ export class MailPerview extends React.Component {
         this.setState(
             {
                 setEmail: {
-                    email,
                     titleTrim: `${email.title.substring(0, 20)}..`,
-                    previewClass: (email.isRead) ? 'is-read' : '',
-                    isRead: email.isRead
+                    previewClass: (email.isRead) ? 'is-read' : ''
                 }
+               
             }
         )
+
     }
-    toggleRead (email) {
-        // const { email } = this.state.setEmail
-        console.log(email)
-        // this.setState(
-        //     {
-        //         ...email,
-        //         isRead: (email.isRead = !email.isRead)
-        //     }
-        // )
+    toggleRead(email) {
+
+        this.props.onToggleRead(email)
     }
+
+
     render() {
-        const { email, titleTrim, previewClass } = this.state.setEmail
+        const {email} =this.props
+        const { titleTrim, previewClass } = this.state.setEmail
         if (email) return (
-            <div className={previewClass} onClick={() => this.toggleRead(this)}>
+            <div className={previewClass} onClick={() => this.toggleRead(email)}>
                 { email.from} || { titleTrim} || { email.hour}:{email.min}
             </div >
         )
