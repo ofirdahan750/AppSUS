@@ -14,7 +14,7 @@ render() {
             <li><NavLink exact to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/keep">Keep</NavLink></li>
-            <li><NavLink to="/mail">Mail</NavLink></li>
+            <li><NavLink to="/mail/inbox">Mail</NavLink></li>
           </ul>
         </nav>
         </section>
