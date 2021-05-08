@@ -34,7 +34,8 @@ function _createEmails() {
     if (!emails || !emails.length) {
 
         emails = []
-        for(let i = 0 ; i < 250 ; i++) {
+        for (let i = 0; i < 250; i++) {
+           let currTimeStamp = utilService.randomIntFromInterval(1273330510, Date.now())
             let newMail =
 
             {
@@ -42,13 +43,10 @@ function _createEmails() {
                 'from': utilService.makeName(), //NAME OF THE THE the sender
                 'title': utilService.makeTitle(), //title
                 'text': utilService.makeTxt(), //txt body
-                'year': utilService.randomIntFromInterval(2010,2020),//to-min random time unit
-                'mouth': utilService.randomIntFromInterval(1,12),
-                'day': utilService.randomIntFromInterval(1,28),
-                'hour': utilService.randomIntFromInterval(1,23),
-                'min': utilService.randomIntFromInterval(1,59),
+                'timeStamp': currTimeStamp,
+                'date': new Date(currTimeStamp).toISOString(),
                 'isRead': false,//IS THE MAIL READ,
-                'type':'inbox'
+                'type': 'inbox'
             }
 
 
@@ -74,6 +72,6 @@ function getEmptyMail() {
         // 'title': '', //title
         // 'text': '', //txt body
         'isRead': true,//IS THE MAIL READ
-        'type':'send'
+        'type': 'send'
     }
 }

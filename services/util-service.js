@@ -10,7 +10,8 @@ export const utilService = {
 }
 function randomIntFromInterval(min, max) {
     let rdnNum = Math.floor(Math.random() * (max - min + 1) + min);
-    return (rdnNum <= 9) ? `0${rdnNum}` : rdnNum
+    return rdnNum
+    // return (rdnNum <= 9) ? `0${rdnNum}` : rdnNum
 }
 
 function saveToStorage(key, value) {
