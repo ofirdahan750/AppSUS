@@ -1,13 +1,21 @@
 const { Link } = ReactRouterDOM
-export class MailSideNav extends React.Component {
-    render() {
+
+const tabs = [
+    'inbox',
+    'send'
+    // 'compose'
+]
+export function MailSideNav (props) {
+   
         return (
             <section className="email-sidenav flex column">
-               <Link to="/mail/Compose"><button>+Compose</button></Link>
-               <Link to="/mail/Inbox"><button>Inbox</button></Link>
-               <Link to="/mail/Send"><button>Send</button></Link>
-
+                {tabs.map((tab, i)=> {
+                    return <button onClick={()=> props.tab(tab)} key={i} >{tab}</button>
+                })}
+               <Link to="/mails/compose"><button>+Compose</button></Link>
+               {/* <Link to="/mail/inbox"><button>Inbox</button></Link>
+               <Link to="/mail/send"><button>Send</button></Link> */}
             </section>
         )
-    }
+    
 }

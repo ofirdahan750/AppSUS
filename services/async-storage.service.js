@@ -18,12 +18,12 @@ function get(entityType, entityId) {
         .then(entities => entities.find(entity => entity.id === entityId))
 }
 
-function post(entityType, newEntity) {
+ function post(entityType, newEntity) {
     newEntity.id = _makeId()
     return query(entityType)
         .then(entities => {
-            entities = [newEntity].concat(entities)
-            // entities.push(newEntity);
+            // entities = [newEntity].concat(entities)
+            entities.push(newEntity);
             _save(entityType, entities)
             return newEntity;
         })

@@ -7,7 +7,6 @@ const EMAIL_KEY = 'emails';
 
 export const EmailService = {
     query,
-    getEmptyMail,
     remove,
     getById,
     save,
@@ -66,12 +65,12 @@ function post(email) {
 }
 
 
-function getEmptyMail() {
-    return {
-        'id': utilService.makeId, //random from util service
-        // 'title': '', //title
-        // 'text': '', //txt body
-        'isRead': true,//IS THE MAIL READ
-        'type': 'send'
-    }
-}
+// function getEmptyMail() {
+//     return {
+//         'id': utilService.makeId, //random from util service
+//         // 'title': '', //title
+//         // 'text': '', //txt body
+//         'isRead': true,//IS THE MAIL READ
+//         'type': 'send'
+//     }
+// }

@@ -2,6 +2,8 @@ const { NavLink, withRouter } = ReactRouterDOM
 
 
 export class _AppHeader extends React.Component {
+
+  
 render() {
   return (
     <header className="main-header">
@@ -14,7 +16,7 @@ render() {
             <li><NavLink exact to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/keep">Keep</NavLink></li>
-            <li><NavLink to="/mail/inbox">Mail</NavLink></li>
+            <li><NavLink to="/mails">Mail</NavLink></li>
           </ul>
         </nav>
         </section>
