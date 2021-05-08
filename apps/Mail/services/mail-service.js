@@ -33,8 +33,8 @@ function _createEmails() {
     if (!emails || !emails.length) {
 
         emails = []
-        for (let i = 0; i < 250; i++) {
-           let currTimeStamp = utilService.randomIntFromInterval(1273330510, Date.now())
+        for (let i = 0; i < 15; i++) {
+            let currTimeStamp = utilService.randomIntFromInterval(1273330510, Date.now())
             let newMail =
 
             {
@@ -61,7 +61,6 @@ function save(email) {
 }
 function post(email) {
     return storageService.post(EMAIL_KEY, email)
-
 }
 
 

@@ -5,11 +5,12 @@ import { MailSort } from '../cmps/MailSort.jsx'
 import { MailSideNav } from '../cmps/MailSideNav.jsx'
 import { EmailCompose } from './EmailCompose.jsx'
 
+
 const { Route, Switch } = ReactRouterDOM
 
 export class MailApp extends React.Component {
     state = {
-        emails: null,
+        emails: [],
         searchSelect: 'all',
         currentTab: 'inbox'
     }
@@ -71,37 +72,43 @@ export class MailApp extends React.Component {
         return sortEmail
     }
 
-    handleTab=(tab)=> {
-this.setState({currentTab : tab})
+    handleTab = (tab) => {
+        this.setState({ currentTab: tab })
     }
 
-    checkTab = (tab) => {
-        const {emails}= this.state
-        switch (tab) {
-            case 'inbox':
-                return emails ?
-                 <MailList emails={emails} onToggleRead={this.onToggleRead} /> 
-                 : <div>No email to show..</div>
-            case 'compose':
-                return <EmailCompose />
-                case 'send':
-                  return <EmailCompose />
-            default:
-              
-                break;
-        }
+    // checkTab = (tab) => {
+    //     const { emails } = this.state
+    //     switch (tab) {
+    //         case 'inbox':
+    //             return emails ?
+    //                 <MailList emails={emails} onToggleRead={this.onToggleRead} deleteMail={this.deleteMail} />
+    //                 : <div>No email to show..</div>
+    //         case 'compose':
+    //             return <EmailCompose />
+    //         case 'send':
+    //             return <EmailCompose />
+    //         default:
+    //             break;
+    //     }
+    // }
+    deleteMail = (emailId) => {
+        EmailService.remove(emailId).then((emails) => {
+            let sortedEmail = this.sortEmail('date', emails)
+            this.setState({ emails: sortedEmail })
+        })
     }
-
     render() {
         const { emails, currentTab } = this.state;
 
-        let content = this.checkTab(currentTab)
+        // let content = this.checkTab(currentTab)
         return (
             <main className="email-section flex">
                 <MailSearch search={this.handleSearch} select={this.handleSelect} />
                 <MailSort sort={this.handleSort} />
-                <MailSideNav tab={   this.handleTab} />
-                {content}
+                <MailSideNav tab={this.handleTab} />
+                { emails.length > 0 ?
+                    <MailList emails={emails} onToggleRead={this.onToggleRead} deleteMail={this.deleteMail} />
+                    : <div>No email to show..</div>}
             </main>
         )
     }
