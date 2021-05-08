@@ -10,14 +10,14 @@ export class AppMain extends React.Component {
     render() {
         return (
             <Router>
-            <main className="main-app">
-                <Switch>
-                    <Route  component={MailApp} path="/mail" />
-                    <Route component={KeepApp} path="/keep" />
-                    <Route component={about} path="/about" />
-                    <Route component={AppHome} path="/" />
-                </Switch>
-            </main>
+                <main className="main-app">
+                    <Switch>
+                        <Route component={MailApp} path="/mail/" />
+                        <Route component={KeepApp} path="/keep" />
+                        <Route component={about} path="/about" />
+                        <Route component={AppHome} path="/" />
+                    </Switch>
+                </main>
             </Router>
         )
     }
